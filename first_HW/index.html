@@ -2,32 +2,46 @@
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>First Web</title>
+    <style>
+        ol#top_menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: none;
+            text-align: center;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            color: orange
+        }
+    </style>
 </head>
 
 <body>
-    <canvas id="canvas" width="500" height="500"></canvas>
+    <ol id="top_menu">
+        <li>
+            <a href="index.html"><img src="icon.png" alt="no picture"></a>
+        </li>
+        <li>
+            <a href="index.html">first</a>
+        </li>
 
-    <script>
-        window.onload = function() {
-            var canvas = document.getElementById('canvas');
-            var context = canvas.getContext('2d');
-            context.fillStyle = 'gray';
-            context.fillRect(30, 30, 400, 400);
-            context.fillStyle = 'white';
-            context.fillRect(30, 30, 380, 380);
-            context.fillStyle = 'gray';
-            context.fillRect(30, 30, 360, 360);
-            context.fillStyle = 'white';
-            context.fillRect(30, 30, 340, 340);
-            context.fillStyle = 'gray';
-            context.fillRect(30, 30, 300, 300);
-            context.beginPath();
-            context.font = '50px Courier New';
-            context.fillStyle = '#FFF';
-            context.fillText('Hello', 60, 80)
-        }
-    </script>
+    </ol>
+
 </body>
 
 </html>

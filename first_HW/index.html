@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+            context.fillStyle = 'gray';
+            context.fillRect(30, 30, 400, 400);
+            context.fillStyle = 'white';
+            context.fillRect(30, 30, 380, 380);
+            context.fillStyle = 'gray';
+            context.fillRect(30, 30, 360, 360);
+            context.fillStyle = 'white';
+            context.fillRect(30, 30, 340, 340);
+            context.fillStyle = 'gray';
+            context.fillRect(30, 30, 300, 300);
+            context.beginPath();
+            context.font = '50px Courier New';
+            context.fillStyle = '#FFF';
+            context.fillText('Hello', 60, 80)
+        }
+    </script>
+</body>
+
+</html>

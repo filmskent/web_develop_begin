@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        #Header_tel {
+            text-decoration: none;
+            color: #9d9d9d;
+            line-height: 20px;
+        }
+        
+        #Header_tel:visited {
+            text-decoration: none;
+            color: white;
+        }
+        
+        #Header_tel:hover {
+            text-decoration: none;
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="menu-section container-fluid" style="position:fixed;top:0;z-index:5;width:100%;padding:0;">
+        <nav class="navbar navbar-inverse center-block">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img src="logo_nd_school_footer.png" style="width:100;height:120%;"></a>
+                </div>
+                <ul class="nav navbar-nav navbar-right nav-school">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                    <li>
+                        <div><a class="btn-r" href="tel" id="Header_tel" style="padding: 15px 15px;top:15px;"> Tel :0123456789</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section class="slide-section">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item"><img src="http://www.netdesign.ac.th/file_managers/uploads/banners/1503563374_New2.jpg" class="img-responsive" alt=""></div>
+                <div class="item"><img src="http://www.netdesign.ac.th/file_managers/uploads/banners/1503564665_new1.jpg" class="img-responsive" alt=""></div>
+                <div class="item active"><img src="http://www.netdesign.ac.th/file_managers/uploads/banners/1503563396_new4.jpg" class="img-responsive" alt=""></div>
+                <div class="item"><img src="http://www.netdesign.ac.th/file_managers/uploads/banners/1503563391_New3.jpg" class="img-responsive" alt=""></div>
+            </div>
+
+        </div>
+        <!--   
+        <div class="overlay-bg">
+            <img src="bg-shadow.png" alt="">
+        </div>
+    -->
+
+
+    </section>
+
+    <!--input section-->
+    <section class="bg-shcool">
+        <div class="container">
+
+            <form>
+                <div class="home-search">
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+
+</body>
+
+</html>

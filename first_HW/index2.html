@@ -2,29 +2,33 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>1st Homework</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
-        #Header_tel {
+        #Header_tel,
+        #list-item {
             text-decoration: none;
             color: #9d9d9d;
             line-height: 20px;
         }
         
-        #Header_tel:visited {
+        #Header_tel:visited,
+        #list-item:visited {
             text-decoration: none;
             color: white;
         }
         
-        #Header_tel:hover {
+        #Header_tel:hover,
+        #list-item:hover {
             text-decoration: none;
             color: orange;
         }
     </style>
+    <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
@@ -35,13 +39,13 @@
                     <a class="navbar-brand" href="#">
                         <img src="logo_nd_school_footer.png" style="width:100;height:120%;"></a>
                 </div>
-                <ul class="nav navbar-nav navbar-right nav-school">
+                <ul class="nav navbar-nav navbar-right nav-school" id="list-item">
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="#">Page 1</a></li>
                     <li><a href="#">Page 2</a></li>
                     <li><a href="#">Page 3</a></li>
                     <li>
-                        <div><a class="btn-r" href="tel" id="Header_tel" style="padding: 15px 15px;top:15px;"> Tel :0123456789</a>
+                        <div><a class="btn-r,navbar-right" href="tel" id="Header_tel" style="padding: 15px 15px;top:15px;"> Tel :0123456789</a>
                         </div>
                     </li>
                 </ul>
@@ -74,15 +78,44 @@
         </div>
     -->
 
-
     </section>
 
     <!--input section-->
-    <section class="bg-shcool">
-        <div class="container">
+    <section class="bg-shcool" style="background-color:darkblue">
+        <div class="container-fluid">
 
             <form>
                 <div class="home-search">
+                    <div class="input-group">
+                        <span class="w-165 input-group-addon">คอร์สเรียนทั้งหมด</span>
+                        <!-- <input id="msg" type="text" class="form-control bg-shcool" name="msg" placeholder="กรอกข้อมูลที่ต้องการค้นหา"> -->
+                        <select id="msg" name="msg" type="text" class="form-control bg-shcool ui-autocomplete-input" autocomplete="off"><option value="">คอร์ส</option><optgroup label="Graphic Design"><option value="adt">Advertising Design &amp; Creative Thinking </option><option value="ind">Magazine Design with InDesign </option><option value="dgp">Digital Photography</option><option value="gad">Graphic Design Advanced</option><option value="cs4">Photoshop for Basic and Techniques</option><option value="ics">Illustrator for Techniques </option><option value="lig">Lightroom for Photography</option><option value="stl">Sticker Line Design</option><option value="cha">Character Design</option><option value="dtp">Digital Painting</option><option value="ivc">Illustrator for Stock Vector</option><option value="ifg">Illustrator for Infographic </option><option value="ilu">Computer Art &amp; Graphic Design </option></optgroup><optgroup label="Web Design"><option value="pro">Professional web Designer </option><option value="wad">Web Design Advanced </option><option value="wpb">Wordpress เป็นอะไรที่มากกว่า Blog!</option></optgroup><optgroup label="Programming"><option value="jaa">Java Web-Base Application with Struts Framework </option><option value="asc">ASP.NET 4.0 &amp; SQL Server by C#</option><option value="php">PHP&amp;MySQL for E-Commerce</option><option value="cbs">C# 4.0 Basic </option><option value="cec">ASP.NET with C# 4.0 for E-Commerce</option><option value="cpp">C++ BASIC</option><option value="jbc">Basic Java Programming</option></optgroup><optgroup label="3D Animation"><option value="may">Maya (Intensive)</option><option value="aft">Movie Special Effect (After Effect)</option><option value="prm">Movie Editing with Adobe Premier </option><option value="zbr">Zbrush</option><option value="3dm">3D Animation with 3DsMax</option></optgroup><optgroup label="Mobile Application"><option value="ipn">iOS App Development</option><option value="and">Android App Developement</option><option value="XMA">Xamarin .NET Cross Platform Mobile Development</option></optgroup><optgroup label="Game Development Design"><option value="uni">Unity Game Development for Beginner</option></optgroup><optgroup label="Architecture"><option value="cad">Architecture with AutoCAD</option><option value="3dv">3D Architecture with 3dsMAX </option><option value="skt">3D Architecture with SketchUp</option><option value="ilv">Interior Lighting with V-Ray</option><option value="slw">Basic Solid work</option><option value="sla">Advance 3D Machine Design &amp; Analysis with Solid work</option></optgroup><optgroup label="Microsoft Office"><option value="exc">Microsoft Excel</option><option value="msf">Microsoft office</option><option value="exa">Microsoft Excel  Advance</option></optgroup></select>
+                    </div>
+
+                    <div class="input-group">
+                        <span class="w-165  input-group-addon">สาขา</span>
+                        <select id="search-branch" name="branch" type="text" class="form-control bg-shcool"><option value="">สาขา</option><option value="SIA">สยามสแควร์</option><option value="FPR">ฟิวเจอร์พาร์ครังสิต</option><option value="PRG">สยามพารากอน</option><option value="MBK">เดอะมอลล์บางแค</option><option value="BKP">โลตัสบางกะปิ</option><option value="MVW">เดอะมอลล์งามวงศ์วาน</option><option value="FOR">ฟอร์จูนทาวน์</option></select>
+                        <!-- <div class="input-group-btn">
+                                  <button class="btn btn-default" type="submit" >
+                                    <i class="glyphicon glyphicon-search"></i> ค้นหา
+                                  </button>
+                                </div> -->
+                    </div>
+                    <div class="input-group">
+                        <span class="w-165  input-group-addon">รอบเรียน</span>
+                        <select type="text" name="p" class="form-control bg-shcool">
+                                    <option value="">รอบเรียน</option>
+                                    <option value="รอบเช้า">first option</option>
+                                    <option value="รอบบ่าย">another option</option>
+                                    <option value="รอบเย็น">another option</option>
+                                    <option value="เต็มวัน">last option</option>
+                                </select>
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i> ค้นหา
+                                  </button>
+                        </div>
+                    </div>
                 </div>
             </form>
 

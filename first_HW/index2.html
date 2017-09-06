@@ -5,10 +5,17 @@
     <title>1st Homework</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="screen" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+        }
+        
         #Header_tel,
         #list-item {
             text-decoration: none;
@@ -73,13 +80,32 @@
             border-color: white;
             margin-left: 10px;
         }
+        
+        #Gray-BG-SC {
+            padding: 0px;
+            background-color: #f8f8f8;
+        }
+        
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #323840;
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+        
+        .__
     </style>
+
     <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
     <section class="menu-section container-fluid" style="position:fixed;top:0;z-index:5;width:100%;padding:0;">
-        <nav class="navbar navbar-inverse center-block" style="border-radius:0;opacity: 0.7;">
+        <nav class="navbar navbar-inverse center-block" style="border-radius:0; z-index: 10001">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">
@@ -98,67 +124,191 @@
             </div>
         </nav>
     </section>
-    <section class="slide-section">
+    <section class="slide-section" style="height:242px">
 
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-                <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-                <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="3" class=""></li>
-            </ol>
+        <div id="particles-js" style="max-height:242px"></div>
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <div class="item"><img src="http://www.netdesign.ac.th/file_managers/uploads/banners/1503563374_New2.jpg" class="img-responsive" alt=""></div>
-                <div class="item"><img src="http://www.netdesign.ac.th/file_managers/uploads/banners/1503564665_new1.jpg" class="img-responsive" alt=""></div>
-                <div class="item active"><img src="http://www.netdesign.ac.th/file_managers/uploads/banners/1503563396_new4.jpg" class="img-responsive" alt=""></div>
-                <div class="item"><img src="http://www.netdesign.ac.th/file_managers/uploads/banners/1503563391_New3.jpg" class="img-responsive" alt=""></div>
-            </div>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script>
+            particlesJS("particles-js", {
+                "particles": {
+                    "number": {
+                        "value": 88,
+                        "density": {
+                            "enable": true,
+                            "value_area": 700
+                        }
+                    },
+                    "color": {
+                        "value": ["#aa73ff", "#f8c210", "#83d238", "#33b1f8"]
+                    },
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 15
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1.5,
+                            "opacity_min": 0.15,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 2.5,
+                        "random": false,
+                        "anim": {
+                            "enable": true,
+                            "speed": 2,
+                            "size_min": 0.15,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 110,
+                        "color": "#33b1f8",
+                        "opacity": 0.25,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 1.6,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": false,
+                            "mode": "repulse"
+                        },
+                        "onclick": {
+                            "enable": false,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 400,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
+            var count_particles, stats, update;
+            stats = new Stats;
+            stats.setMode(0);
+            stats.domElement.style.position = 'absolute';
+            stats.domElement.style.left = '0px';
+            stats.domElement.style.top = '0px';
+            document.body.appendChild(stats.domElement);
+            count_particles = document.querySelector('.js-count-particles');
+            update = function() {
+                stats.begin();
+                stats.end();
+                if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+                }
+                requestAnimationFrame(update);
+            };
+            requestAnimationFrame(update);;
+        </script>
 
-        </div>
+
+
+
         <!--   
-        <div class="overlay-bg">
-            <img src="bg-shadow.png" alt="">
+        <div class="overlay-bg ">
+            <img src="bg-shadow.png " alt=" ">
         </div>
     -->
 
     </section>
 
     <!--input section-->
-    <section style="background-color:#11c0ff">
-        <div class="container" style="padding-top:20px;padding-bottom:40px">
+    <section style="background-color:#11c0ff ">
+        <div class="container " style="padding-top:20px;padding-bottom:40px ">
 
             <form>
-                <div class="home-search">
-                    <div class="input-group">
-                        <span class="input-group-addon">First option</span>
-                        <!-- <input id="msg" type="text" class="form-control bg-shcool" name="msg" placeholder="กรอกข้อมูลที่ต้องการค้นหา"> -->
-                        <select id="msg" name="msg" type="text" class="form-control" autocomplete="off"><option value="">คอร์ส</option><optgroup label="Graphic Design"><option value="adt">Advertising Design &amp; Creative Thinking </option><option value="ind">Magazine Design with InDesign </option><option value="dgp">Digital Photography</option><option value="gad">Graphic Design Advanced</option><option value="cs4">Photoshop for Basic and Techniques</option><option value="ics">Illustrator for Techniques </option><option value="lig">Lightroom for Photography</option><option value="stl">Sticker Line Design</option><option value="cha">Character Design</option><option value="dtp">Digital Painting</option><option value="ivc">Illustrator for Stock Vector</option><option value="ifg">Illustrator for Infographic </option><option value="ilu">Computer Art &amp; Graphic Design </option></optgroup><optgroup label="Web Design"><option value="pro">Professional web Designer </option><option value="wad">Web Design Advanced </option><option value="wpb">Wordpress เป็นอะไรที่มากกว่า Blog!</option></optgroup><optgroup label="Programming"><option value="jaa">Java Web-Base Application with Struts Framework </option><option value="asc">ASP.NET 4.0 &amp; SQL Server by C#</option><option value="php">PHP&amp;MySQL for E-Commerce</option><option value="cbs">C# 4.0 Basic </option><option value="cec">ASP.NET with C# 4.0 for E-Commerce</option><option value="cpp">C++ BASIC</option><option value="jbc">Basic Java Programming</option></optgroup><optgroup label="3D Animation"><option value="may">Maya (Intensive)</option><option value="aft">Movie Special Effect (After Effect)</option><option value="prm">Movie Editing with Adobe Premier </option><option value="zbr">Zbrush</option><option value="3dm">3D Animation with 3DsMax</option></optgroup><optgroup label="Mobile Application"><option value="ipn">iOS App Development</option><option value="and">Android App Developement</option><option value="XMA">Xamarin .NET Cross Platform Mobile Development</option></optgroup><optgroup label="Game Development Design"><option value="uni">Unity Game Development for Beginner</option></optgroup><optgroup label="Architecture"><option value="cad">Architecture with AutoCAD</option><option value="3dv">3D Architecture with 3dsMAX </option><option value="skt">3D Architecture with SketchUp</option><option value="ilv">Interior Lighting with V-Ray</option><option value="slw">Basic Solid work</option><option value="sla">Advance 3D Machine Design &amp; Analysis with Solid work</option></optgroup><optgroup label="Microsoft Office"><option value="exc">Microsoft Excel</option><option value="msf">Microsoft office</option><option value="exa">Microsoft Excel  Advance</option></optgroup></select>
+                <div class="home-search ">
+                    <div class="input-group ">
+                        <span class="input-group-addon ">First option</span>
+                        <!-- <input id="msg " type="text " class="form-control bg-shcool " name="msg " placeholder="กรอกข้อมูลที่ต้องการค้นหา "> -->
+                        <select id="msg " name="msg " type="text " class="form-control " autocomplete="off "><option value=" ">คอร์ส</option><optgroup label="Graphic Design "><option value="adt
+            ">Advertising Design &amp; Creative Thinking </option><option value="ind ">Magazine Design with InDesign </option><option value="dgp ">Digital Photography</option><option value="gad ">Graphic Design Advanced</option><option value="cs4 ">Photoshop for Basic and Techniques</option><option value="ics
+            ">Illustrator for Techniques </option><option value="lig ">Lightroom for Photography</option><option value="stl ">Sticker Line Design</option><option value="cha ">Character Design</option><option value="dtp ">Digital Painting</option><option value="ivc
+            ">Illustrator for Stock Vector</option><option value="ifg ">Illustrator for Infographic </option><option value="ilu ">Computer Art &amp; Graphic Design </option></optgroup><optgroup label="Web Design "><option value="pro ">Professional web Designer </option><option value="wad
+            ">Web Design Advanced </option><option value="wpb ">Wordpress เป็นอะไรที่มากกว่า Blog!</option></optgroup><optgroup label="Programming "><option value="jaa ">Java Web-Base Application with Struts Framework </option><option value="asc
+            ">ASP.NET 4.0 &amp; SQL Server by C#</option><option value="php ">PHP&amp;MySQL for E-Commerce</option><option value="cbs ">C# 4.0 Basic </option><option value="cec ">ASP.NET with C# 4.0 for E-Commerce</option><option value="cpp ">C++ BASIC</option><option value="jbc
+            ">Basic Java Programming</option></optgroup><optgroup label="3D Animation "><option value="may ">Maya (Intensive)</option><option value="aft ">Movie Special Effect (After Effect)</option><option value="prm ">Movie Editing with Adobe Premier </option><option value="zbr ">Zbrush</option><option value="3dm
+            ">3D Animation with 3DsMax</option></optgroup><optgroup label="Mobile Application "><option value="ipn ">iOS App Development</option><option value="and ">Android App Developement</option><option value="XMA ">Xamarin .NET Cross Platform Mobile Development</option></optgroup><optgroup label="Game Development
+            Design "><option value="uni ">Unity Game Development for Beginner</option></optgroup><optgroup label="Architecture "><option value="cad ">Architecture with AutoCAD</option><option value="3dv
+            ">3D Architecture with 3dsMAX </option><option value="skt ">3D Architecture with SketchUp</option><option value="ilv ">Interior Lighting with V-Ray</option><option value="slw ">Basic Solid work</option><option value="sla
+            ">Advance 3D Machine Design &amp; Analysis with Solid work</option></optgroup><optgroup label="Microsoft Office "><option value="exc ">Microsoft Excel</option><option value="msf ">Microsoft office</option><option value="exa ">Microsoft Excel  Advance</option></optgroup></select>
                     </div>
 
-                    <div class="input-group">
-                        <span class="input-group-addon">สาขา</span>
-                        <select id="search-branch" name="branch" type="text" class="form-control"><option value="">สาขา</option><option value="SIA">สยามสแควร์</option><option value="FPR">ฟิวเจอร์พาร์ครังสิต</option><option value="PRG">สยามพารากอน</option><option value="MBK">เดอะมอลล์บางแค</option><option value="BKP">โลตัสบางกะปิ</option><option value="MVW">เดอะมอลล์งามวงศ์วาน</option><option value="FOR">ฟอร์จูนทาวน์</option></select>
-                        <!-- <div class="input-group-btn">
-                                  <button class="btn btn-default" type="submit" >
-                                    <i class="glyphicon glyphicon-search"></i> ค้นหา
+                    <div class="input-group ">
+                        <span class="input-group-addon ">สาขา</span>
+                        <select id="search-branch " name="branch " type="text " class="form-control "><option value=" ">สาขา</option><option value="SIA ">สยามสแควร์</option><option value="FPR ">ฟิวเจอร์พาร์ครังสิต</option><option value="PRG
+            ">สยามพารากอน</option><option value="MBK ">เดอะมอลล์บางแค</option><option value="BKP ">โลตัสบางกะปิ</option><option value="MVW ">เดอะมอลล์งามวงศ์วาน</option><option value="FOR ">ฟอร์จูนทาวน์</option></select>
+                        <!-- <div class="input-group-btn ">
+                                  <button class="btn btn-default " type="submit " >
+                                    <i class="glyphicon glyphicon-search "></i> ค้นหา
                                   </button>
                                 </div> -->
                     </div>
-                    <div class="input-group">
-                        <span class="input-group-addon">รอบเรียน</span>
-                        <select type="text" name="p" class="form-control">
-                                    <option value="">รอบเรียน</option>
-                                    <option value="1">first option</option>
-                                    <option value="2">another option</option>
-                                    <option value="3">another option</option>
-                                    <option value="4">last option</option>
+                    <div class="input-group ">
+                        <span class="input-group-addon ">รอบเรียน</span>
+                        <select type="text " name="p " class="form-control ">
+                                    <option value=" ">รอบเรียน</option>
+                                    <option value="1 ">first option</option>
+                                    <option value="2 ">another option</option>
+                                    <option value="3 ">another option</option>
+                                    <option value="4 ">last option</option>
                                 </select>
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit">
-                                    <i class="glyphicon glyphicon-search"></i> ค้นหา
+                        <div class="input-group-btn ">
+                            <button class="btn btn-default " type="submit ">
+                                    <i class="glyphicon glyphicon-search "></i> ค้นหา
                                   </button>
                         </div>
                     </div>
@@ -169,85 +319,87 @@
     </section>
 
     <!--main-->
-    <section style="padding:60px 0px">
-        <div class="container">
-            <h2><span style="padding:0px 40px">Recomend Course</span>
-                <span style="color:#11c0ff">--------------------------</span>
-                <span style="float:right;background-color:#11c0ff;font-size:16px;color:white;padding:4px 25px;">All course</span>
+    <section style="padding:60px 0px;background-color:white; ">
+
+        <div class="container ">
+            <h2 style="font-size:26px;background-color:#11c0ff; "><span style="padding:0px 40px 0px 0px;background-color:white; ">Recomend Course</span>
+                <span style="float:right;background-color:#11c0ff;font-size:16px;color:white;padding:4px 25px; ">All course</span>
             </h2>
             <div>
             </div>
         </div>
-        <div class="container">
-            <h2 style="margin:20px 0px 10px">Super Good Reason <span style="color:#11c0ff">with Court Design</span></h2>
+        <div id="Gray-BG-SC ">
+            <div class="container ">
+                <h2 style="margin:20px 0px 10px;font-size:26px; ">Super Good Reason <span style="color:#11c0ff ">with Court Design</span></h2>
 
-            <div class="row">
-                <div class="col-md-12">
+                <div class="row ">
+                    <div class="col-md-12 ">
 
 
-                    <div class="col-md-4 col-xs-6">
-                        <ul class="list-inline" style=" padding-top:20px;padding-bottom:20px;">
-                            <li>
-                                <img src="icon111.png" class="icon-image">
-                            </li>
-                            <li style="vertical-align: middle;">
-                                <span style="color:orange">First important</span><br> reason <br> to learning <br>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <div class="list">
-                            <ul class="list-inline" style="padding-top:20px;padding-bottom:20px;">
+                        <div class="col-md-4 col-xs-6 ">
+                            <ul class="list-inline " style=" padding-top:20px;padding-bottom:20px; ">
                                 <li>
-                                    <img src="icon111.png" class="icon-image">
+                                    <img src="icon111.png " class="icon-image ">
                                 </li>
-                                <li style="vertical-align: middle;">
-                                    <span style="color:orange">Second important</span><br> reason <br> to learning <br>
+                                <li style="vertical-align: middle; ">
+                                    <span style="color:orange ">First important</span><br> reason <br> to learning <br>
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul class="list-inline" style="padding-top:20px; padding-bottom:20px;">
-                            <li>
-                                <img src="icon111.png" class="icon-image">
-                            </li>
-                            <li style="vertical-align: middle;">
-                                <span style="color:orange">Third important</span><br> reason <br> to learning <br>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul class="list-inline" style=" padding-top:20px;padding-bottom:20px;">
-                            <li>
-                                <img src="icon111.png" class="icon-image">
-                            </li>
-                            <li style="vertical-align: middle;">
-                                <span style="color:orange">Fouth important</span><br> reason <br> to learning <br>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <div class="list">
-                            <ul class="list-inline" style="padding-top:20px;padding-bottom:20px;">
+                        <div class="col-md-4 col-xs-6 ">
+                            <div class="list ">
+                                <ul class="list-inline " style="padding-top:20px;padding-bottom:20px; ">
+                                    <li>
+                                        <img src="icon111.png " class="icon-image ">
+                                    </li>
+                                    <li style="vertical-align: middle; ">
+                                        <span style="color:orange ">Second important</span><br> reason <br> to learning <br>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 ">
+                            <ul class="list-inline " style="padding-top:20px; padding-bottom:20px; ">
                                 <li>
-                                    <img src="icon111.png" class="icon-image">
+                                    <img src="icon111.png " class="icon-image ">
                                 </li>
-                                <li style="vertical-align: middle;">
-                                    <span style="color:orange">Fifth important</span><br> reason <br> to learning <br>
+                                <li style="vertical-align: middle; ">
+                                    <span style="color:orange ">Third important</span><br> reason <br> to learning <br>
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul class="list-inline" style="padding-top:20px; padding-bottom:20px;">
-                            <li>
-                                <img src="icon111.png" class="icon-image">
-                            </li>
-                            <li style="vertical-align: middle;">
-                                <span style="color:orange">Sixth important</span><br> reason <br> to learning <br>
-                            </li>
-                        </ul>
+                        <div class="col-md-4 col-xs-6 ">
+                            <ul class="list-inline " style=" padding-top:20px;padding-bottom:20px; ">
+                                <li>
+                                    <img src="icon111.png " class="icon-image ">
+                                </li>
+                                <li style="vertical-align: middle; ">
+                                    <span style="color:orange ">Fouth important</span><br> reason <br> to learning <br>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-xs-6 ">
+                            <div class="list ">
+                                <ul class="list-inline " style="padding-top:20px;padding-bottom:20px; ">
+                                    <li>
+                                        <img src="icon111.png " class="icon-image ">
+                                    </li>
+                                    <li style="vertical-align: middle; ">
+                                        <span style="color:orange ">Fifth important</span><br> reason <br> to learning <br>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-6 ">
+                            <ul class="list-inline " style="padding-top:20px; padding-bottom:20px; ">
+                                <li>
+                                    <img src="icon111.png " class="icon-image ">
+                                </li>
+                                <li style="vertical-align: middle; ">
+                                    <span style="color:orange ">Sixth important</span><br> reason <br> to learning <br>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

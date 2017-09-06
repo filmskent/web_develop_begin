@@ -55,10 +55,11 @@
         .form-control {
             background-color: orange;
             border-radius: 0;
-            width: 100%;
+            width: auto;
             float: left;
             color: white;
             border-color: white;
+            height: 34px;
         }
         
         .btn-default {
@@ -97,6 +98,14 @@
             background-position: 50% 50%;
         }
         
+        #navbar-default {
+            border: none;
+        }
+        
+        #navbar-inverse {
+            border: none;
+        }
+        
         .__
     </style>
 
@@ -105,13 +114,13 @@
 
 <body>
     <section class="menu-section container-fluid" style="position:fixed;top:0;z-index:5;width:100%;padding:0;">
-        <nav class="navbar navbar-inverse center-block" style="border-radius:0; z-index: 10001">
+        <nav class="navbar navbar-default center-block" id="top_menu" style="border-radius:0; z-index: 10001">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">
                         <img src="logo_nd_school_footer.png" style="width:100;height:120%;"></a>
                 </div>
-                <ul class="nav navbar-nav navbar-right nav-school" id="list-item">
+                <ul class="nav navbar-nav  navbar-right nav-school" id="list-item">
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="#">Page 1</a></li>
                     <li><a href="#">Page 2</a></li>
@@ -123,6 +132,17 @@
                 </ul>
             </div>
         </nav>
+        <script>
+            $(document).scroll(function() {
+                if ($(window).scrollTop() === 0) {
+                    $("#top_menu").removeClass("navbar-inverse");
+                    $("#top_menu").addClass("navbar-default");
+                } else {
+                    $("#top_menu").removeClass("navbar-default");
+                    $("#top_menu").addClass("navbar-inverse");
+                }
+            });
+        </script>
     </section>
     <section class="slide-section" style="height:242px">
 
@@ -327,78 +347,133 @@
             </h2>
             <div>
             </div>
-        </div>
-        <div id="Gray-BG-SC ">
-            <div class="container ">
-                <h2 style="margin:20px 0px 10px;font-size:26px; ">Super Good Reason <span style="color:#11c0ff ">with Court Design</span></h2>
+            <div class="row">
+                <div class="col-md-4 col-xs-6">
+                    <div style="height: 300px; width: 297.5px;float:left;position: relative;margin: 40px 15px 15px 15px ">
+                        <a><img src="503789872.jpg " alt=" " class="img-responsive ">
 
-                <div class="row ">
-                    <div class="col-md-12 ">
+                            <div style="background-color: #f8f8f8;margin-top: 0px;">
+                                <h3 style="color:#11c0ff; margin-top: 0px;"> Professional web Designer
+                                </h3>
+                                <p>A bsdocmo SFsdsmoicjo ASdaosocasijcd SADSpvco
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                    <div style="height: 300px; width: 297.5px ;float:left;position: relative ;margin: 40px 15px 15px 15px">
+                        <a><img src="503789872.jpg " alt=" " class="img-responsive ">
+
+                            <div style="background-color: #f8f8f8;margin-top: 0px;">
+                                <h3 style="color:#11c0ff;margin-top: 0px; "> Professional web Designer
+                                </h3>
+                                <p style="margin: 0px 15px 15px 15px">A bsdocmo SFsdsmoicjo ASdaosocasijcd SADSpvco
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                    <div style="height: 300px; width: 297.5px ;float:left;position: relative;margin: 0px 15px 15px 15px ">
+                        <a><img src="503789872.jpg " alt=" " class="img-responsive ">
+
+                            <div style="background-color: #f8f8f8;margin-top: 0px;">
+                                <h3 style="color:#11c0ff;margin-top: 0px; "> Professional web Designer
+                                </h3>
+                                <p style="margin: 0px 15px 15px 15px">A bsdocmo SFsdsmoicjo ASdaosocasijcd SADSpvco
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                    <div style="height: 300px; width: 297.5px ;float:left;position: relative ;margin: 0px 15px 15px 15px">
+                        <a><img src="503789872.jpg " alt=" " class="img-responsive ">
+
+                            <div style="background-color: #f8f8f8;margin-top: 0px;">
+                                <h3 style="color:#11c0ff;margin-top: 0px; "> Professional web Designer
+                                </h3>
+                                <p style="margin: 0px 15px 15px 15px">A bsdocmo SFsdsmoicjo ASdaosocasijcd SADSpvco
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="Gray-BG-SC ">
+                <div class="container ">
+                    <h2 style="margin:20px 0px 10px;font-size:26px; ">Super Good Reason <span style="color:#11c0ff ">with Court Design</span></h2>
+
+                    <div class="row ">
+                        <div class="col-md-12 ">
 
 
-                        <div class="col-md-4 col-xs-6 ">
-                            <ul class="list-inline " style=" padding-top:20px;padding-bottom:20px; ">
-                                <li>
-                                    <img src="icon111.png " class="icon-image ">
-                                </li>
-                                <li style="vertical-align: middle; ">
-                                    <span style="color:orange ">First important</span><br> reason <br> to learning <br>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 col-xs-6 ">
-                            <div class="list ">
-                                <ul class="list-inline " style="padding-top:20px;padding-bottom:20px; ">
+                            <div class="col-md-4 col-xs-6 ">
+                                <ul class="list-inline " style=" padding-top:20px;padding-bottom:20px; ">
                                     <li>
                                         <img src="icon111.png " class="icon-image ">
                                     </li>
                                     <li style="vertical-align: middle; ">
-                                        <span style="color:orange ">Second important</span><br> reason <br> to learning <br>
+                                        <span style="color:orange ">First important</span><br> reason <br> to learning <br>
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="col-md-4 col-xs-6 ">
-                            <ul class="list-inline " style="padding-top:20px; padding-bottom:20px; ">
-                                <li>
-                                    <img src="icon111.png " class="icon-image ">
-                                </li>
-                                <li style="vertical-align: middle; ">
-                                    <span style="color:orange ">Third important</span><br> reason <br> to learning <br>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 col-xs-6 ">
-                            <ul class="list-inline " style=" padding-top:20px;padding-bottom:20px; ">
-                                <li>
-                                    <img src="icon111.png " class="icon-image ">
-                                </li>
-                                <li style="vertical-align: middle; ">
-                                    <span style="color:orange ">Fouth important</span><br> reason <br> to learning <br>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 col-xs-6 ">
-                            <div class="list ">
-                                <ul class="list-inline " style="padding-top:20px;padding-bottom:20px; ">
+                            <div class="col-md-4 col-xs-6 ">
+                                <div class="list ">
+                                    <ul class="list-inline " style="padding-top:20px;padding-bottom:20px; ">
+                                        <li>
+                                            <img src="icon111.png " class="icon-image ">
+                                        </li>
+                                        <li style="vertical-align: middle; ">
+                                            <span style="color:orange ">Second important</span><br> reason <br> to learning <br>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-xs-6 ">
+                                <ul class="list-inline " style="padding-top:20px; padding-bottom:20px; ">
                                     <li>
                                         <img src="icon111.png " class="icon-image ">
                                     </li>
                                     <li style="vertical-align: middle; ">
-                                        <span style="color:orange ">Fifth important</span><br> reason <br> to learning <br>
+                                        <span style="color:orange ">Third important</span><br> reason <br> to learning <br>
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="col-md-4 col-xs-6 ">
-                            <ul class="list-inline " style="padding-top:20px; padding-bottom:20px; ">
-                                <li>
-                                    <img src="icon111.png " class="icon-image ">
-                                </li>
-                                <li style="vertical-align: middle; ">
-                                    <span style="color:orange ">Sixth important</span><br> reason <br> to learning <br>
-                                </li>
-                            </ul>
+                            <div class="col-md-4 col-xs-6 ">
+                                <ul class="list-inline " style=" padding-top:20px;padding-bottom:20px; ">
+                                    <li>
+                                        <img src="icon111.png " class="icon-image ">
+                                    </li>
+                                    <li style="vertical-align: middle; ">
+                                        <span style="color:orange ">Fouth important</span><br> reason <br> to learning <br>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-xs-6 ">
+                                <div class="list ">
+                                    <ul class="list-inline " style="padding-top:20px;padding-bottom:20px; ">
+                                        <li>
+                                            <img src="icon111.png " class="icon-image ">
+                                        </li>
+                                        <li style="vertical-align: middle; ">
+                                            <span style="color:orange ">Fifth important</span><br> reason <br> to learning <br>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-xs-6 ">
+                                <ul class="list-inline " style="padding-top:20px; padding-bottom:20px; ">
+                                    <li>
+                                        <img src="icon111.png " class="icon-image ">
+                                    </li>
+                                    <li style="vertical-align: middle; ">
+                                        <span style="color:orange ">Sixth important</span><br> reason <br> to learning <br>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
